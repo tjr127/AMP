@@ -1,8 +1,17 @@
 import requests
 
-amp_client_id = 'a1b2c3d4e5f6g7h8i9j0'
+#here = Path(__file__).parent.absolute()
+#repository_root = (here / ".." ).resolve()
 
-amp_api_key = 'a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6'
+#sys.path.insert(0, str(repository_root))
+
+import env_lab  # noqa
+import env_user  # noqa
+
+amp_client_id = env_user.AMP_CLIENT_ID
+amp_api_key = env_user.AMP_API_KEY
+print(amp_client_id)
+print(amp_api_key)
 
 url = 'https://api.amp.cisco.com/v1/version'
 
